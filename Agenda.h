@@ -2,7 +2,7 @@ struct contato{
    char nome[30];
    char telefone[8];
    char celular[9];
-   char endereço[20];
+   char endereco[20];
    struct contato* prox;
 };
 
