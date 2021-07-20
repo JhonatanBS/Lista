@@ -13,3 +13,4 @@ Agenda* remover(Agenda* c);
 Agenda* alterar(Agenda* c);
 void exibir(Agenda* c);
 void estado(Agenda* c);
+void menu();

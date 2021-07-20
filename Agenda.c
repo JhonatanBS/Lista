@@ -38,3 +38,8 @@ void exibir(Agenda* c){
         aux = aux->prox;
     }
 }
+
+void menu(){
+    printf("MENU\n 0 - Sair\n 1 - Inserir Contato\n 2 - Excluir Contato\n 3 - Alterar Contato\n");
+    printf(" 4 - Pesquisar Contato\n 5 - Exibir Contato\n 6 - Estado da Agenda\n");
+}
