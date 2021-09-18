@@ -6,6 +6,7 @@
 int main(){
     Agenda* C = NULL;
     int opcao;
+    char nome[10];
 
     do{
        menu();
@@ -20,7 +21,11 @@ int main(){
          C = inserir(C);
              break;
          case 2:
-
+         printf("Digite um nome de contato para excluir:");
+         fflush(stdin);
+         gets(nome);
+         strlwr(nome);
+         C = remover(C,nome);
              break;
          case 3:
 

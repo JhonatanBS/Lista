@@ -9,8 +9,9 @@ struct contato{
 typedef struct contato Agenda;
 
 Agenda* inserir(Agenda* c);
-Agenda* remover(Agenda* c);
+Agenda* remover(Agenda* c, char*);
 Agenda* alterar(Agenda* c);
 void exibir(Agenda* c);
 void estado(Agenda* c);
 void menu();
+void minuscula(char);

@@ -13,6 +13,7 @@ Agenda* inserir(Agenda* c){
     printf("Digite o nome do contato:");
     fflush(stdin);
     gets(novo->nome);
+    strlwr(novo->nome);
     printf("Digite o celular do contato:");
     fflush(stdin);
     gets(novo->celular);
@@ -22,6 +23,31 @@ Agenda* inserir(Agenda* c){
 
     novo->prox=c;
     return novo;
+}
+
+Agenda* remover(Agenda* c, char *n){
+    Agenda *atual = c, *ant = NULL;
+    
+    if(atual->nome == n){
+        c = c->prox;
+        free(atual);
+        return c;
+    }
+
+    while(atual != NULL && atual->nome != n){
+         ant = atual;
+         atual = atual->prox;
+    }
+
+    if(atual == NULL){
+        printf("\nO nome não foi encontrado!");
+        return c;
+    }
+    else if(atual->prox != NULL){
+      ant->prox = atual->prox;
+      free(atual);
+    }
+    return c;
 }
 
 void exibir(Agenda* c){
@@ -43,3 +69,7 @@ void menu(){
     printf("MENU\n 0 - Sair\n 1 - Inserir Contato\n 2 - Excluir Contato\n 3 - Alterar Contato\n");
     printf(" 4 - Pesquisar Contato\n 5 - Exibir Contato\n 6 - Estado da Agenda\n");
 }
+
+
+
+
