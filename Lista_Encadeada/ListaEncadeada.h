@@ -1,4 +1,4 @@
-int tamanho = 0;
+int tamanho;
 
 struct lista{
     int valor;

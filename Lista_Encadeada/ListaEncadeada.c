@@ -10,12 +10,11 @@ Lista* insere(Lista* elemento,int v){
 
          novo->valor= v;
          novo->next = elemento;
-                      
+    tamanho++;                  
     return novo;
 }
 
 int quantidade(Lista* elemento){
-    tamanho=0;
     while (elemento != NULL){
         tamanho++;
         elemento = elemento->next;
@@ -23,21 +22,62 @@ int quantidade(Lista* elemento){
     return tamanho;
 }
 
-void imprime(Lista* elemento){
-    printf("%c", 202);
+void imprime(Lista* elemento, int tam){
+    cabecalho(tam*5);
+    //printf("%c", 186);
    
-   for(int i = 0; i<3;i++){
-       printf("%c", 205);
+   while(elemento != NULL){
+       printf("%c", 186);
+       printf("  %d",elemento->valor);
+       printf("  %c",186);
+       printf("%c",32);
+       printf("%c",186);
+       printf("->");
+       elemento = elemento->next;
    }
+   printf("NULL");
+   rodape(tam*5);
 }
 
 
-void cabecalho(int tam, Lista* elemento){
-     int i;
-     printf("%c", 202);
-     //for()
+void cabecalho(int tam){
+     int i, cinco=5,j=1;
+
+     printf("%c", 201);
+     for(i = 0; i< tam;i++){
+        if(i == cinco*j){
+            printf("%c",203);
+            printf("%c",205);
+            printf("%c",187);
+            printf("%c",32);
+            printf("%c",32);
+            printf("%c",201);
+            j++;
+        }
+        printf("%c",205);
+     }
+     printf("%c",203);
+     printf("%c",205);
+     printf("%c\n",187);
 }
 
-void rodape(){
+void rodape(int tam){
+     int i, cinco=5,j=1;
 
+     printf("\n%c", 200);
+     for(i = 0; i< tam;i++){
+        if(i == cinco*j){
+            printf("%c",202);
+            printf("%c",205);
+            printf("%c",188);
+            printf("%c",32);
+            printf("%c",32);
+            printf("%c",200);
+            j++;
+        }
+        printf("%c",205);
+     }
+     printf("%c",202);
+     printf("%c",205);
+     printf("%c",188);   
 }

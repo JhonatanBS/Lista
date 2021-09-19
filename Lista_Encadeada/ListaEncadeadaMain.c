@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "ListaEncadeada.c"
-
+#include <windows.h>
 int main(){
     Lista *no = NULL;int numero,opcao = 1,x;
 //imprime(no);
-
+    // printf("\u2654");
         do{
        //menu();
        printf("\nDigite um valor para o Menu:");
@@ -30,12 +30,12 @@ int main(){
            //F=removeElemento(F,numero);
            break;
            case 4:
-           x = quantidade(no);
-           printf("O tamanho do vetor eh %d",x);
+           //x = quantidade(no);
+           //printf("O tamanho do vetor eh %d",x);
            
            break;
            case 5:
-           imprime(no);
+           imprime(no,tamanho);
            break;
        }
      }while(opcao != 0);//Fim do While
