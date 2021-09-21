@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 #include "ListaEncadeada.c"
-#include <windows.h>
+
 int main(){
-    Lista *no = NULL;int numero,opcao = 1,x;
+    setlocale(LC_NUMERIC,"Portuguese");
+    Lista *no = NULL;int opcao = 1;
+    float numero;
 //imprime(no);
     // printf("\u2654");
         do{
@@ -18,7 +21,8 @@ int main(){
            break;
            case 1:
            printf("Digite um numero para ser inserido:");
-           scanf("%d",&numero);
+           scanf("%f",&numero);
+           //numero = 5.55;
            no = insere(no, numero);
            break;
            case 2:
@@ -26,7 +30,7 @@ int main(){
            break;
            case 3:
            printf("Digite o valor para ser removida da Fila:");
-           scanf("%d",&numero);
+           //scanf("%d",&numero);
            //F=removeElemento(F,numero);
            break;
            case 4:

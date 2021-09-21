@@ -1,10 +1,21 @@
+
 int tamanho;
 
 struct lista{
-    int valor;
-    //char *produto;
+    float valor;
+    char produto[9];
    struct lista *next;
 };
 
 typedef struct lista Lista;
 
+/*
+arroz
+feijão
+macarrão
+açucar
+sal
+carne
+legumes
+vegetais
+*/

@@ -3,7 +3,7 @@
 #include <string.h>
 #include "ListaEncadeada.h"
 
-Lista* insere(Lista* elemento,int v){
+Lista* insere(Lista* elemento,float v){
     Lista* aux = elemento;
     
          Lista* novo = (Lista*)malloc(sizeof(Lista));
@@ -23,29 +23,40 @@ int quantidade(Lista* elemento){
 }
 
 void imprime(Lista* elemento, int tam){
-    cabecalho(tam*5);
-    //printf("%c", 186);
+    Lista* aux = elemento;
+    cabecalho(tam*11);
+    
    
    while(elemento != NULL){
        printf("%c", 186);
-       printf("  %d",elemento->valor);
+       printf("     %.2f",elemento->valor);
        printf("  %c",186);
        printf("%c",32);
        printf("%c",186);
        printf("->");
        elemento = elemento->next;
    }
+   printf("\n");
+   while(aux != NULL){
+       printf("%c", 186);
+       printf("  R$ %.2f",aux->valor);
+       printf("  %c",186);
+       printf("%c",32);
+       printf("%c",186);
+       printf("->");
+       aux = aux->next;
+   }
    printf("NULL");
-   rodape(tam*5);
+   rodape(tam*11);
 }
 
 
 void cabecalho(int tam){
-     int i, cinco=5,j=1;
+     int i, onze=11,j=1;
 
      printf("%c", 201);
      for(i = 0; i< tam;i++){
-        if(i == cinco*j){
+        if(i == onze*j){
             printf("%c",203);
             printf("%c",205);
             printf("%c",187);
@@ -62,11 +73,11 @@ void cabecalho(int tam){
 }
 
 void rodape(int tam){
-     int i, cinco=5,j=1;
+     int i, onze=11,j=1;
 
      printf("\n%c", 200);
      for(i = 0; i< tam;i++){
-        if(i == cinco*j){
+        if(i == onze*j){
             printf("%c",202);
             printf("%c",205);
             printf("%c",188);
